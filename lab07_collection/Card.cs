@@ -6,14 +6,14 @@ namespace lab07_collection
 {
     public class Card
     {
-        public enum Suits { Diamonds,Hearts,Spades,Clubs }
+        public enum Type { Diamonds,Hearts,Spades,Clubs }
         public string CardNum { get; set; }
-        public Suits suit { get; set; }
+        public Type type { get; set; }
 
-        public Card(String cardNumber,Suits suitName)
+        public Card(String cardNumber,Type  suitName)
         {
             CardNum = cardNumber;
-            suit = suitName;
+            type = suitName;
         }
     }
 }

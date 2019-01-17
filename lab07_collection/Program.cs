@@ -11,17 +11,17 @@ namespace lab07_collection
             Console.WriteLine("Time to play");
 
             Deck<Card> Deck = new Deck<Card>();
-            Card card1 = new Card("7", Card.Suits.Diamonds);
+            Card card1 = new Card("7", Card.Type.Diamonds);
 
-            Card card2 = new Card("2", Card.Suits.Hearts);
+            Card card2 = new Card("2", Card.Type.Hearts);
 
-            Card card3 = new Card("10", Card.Suits.Clubs);
+            Card card3 = new Card("10", Card.Type.Clubs);
 
-            Card card4 = new Card("2", Card.Suits.Spades);
+            Card card4 = new Card("2", Card.Type.Spades);
 
-            Card card5 = new Card("A", Card.Suits.Spades);
+            Card card5 = new Card("A", Card.Type.Spades);
 
-            Card card6 = new Card("Ace", Card.Suits.Diamonds);
+            Card card6 = new Card("Ace", Card.Type.Diamonds);
 
             Deck.Add(card1);
 
@@ -35,29 +35,21 @@ namespace lab07_collection
 
             Deck.Add(card6);
 
-
-
             Console.WriteLine("your card is:");
-
-
 
             foreach (Card item in Deck)
 
             {
-
-                Console.Write($"{item.CardNum} {item.suit} ");
-
+                Console.Write($"{item.CardNum} {item.type} ");
             }
-
+            Console.WriteLine("      ");
             Console.WriteLine("      ");
 
-            Console.WriteLine("      ");
+            
+            /////////////////remove
+            Card[] newarray = Deck.Remove(card4);
 
-            //reomove one card from deck
-
-            Card[] newarr = Deck.Remove(card4);
-
-            Console.WriteLine($"Removing {card4.CardNum} {card4.suit}");
+            Console.WriteLine($"Removing {card4.CardNum} {card4.type}");
 
 
 
@@ -65,15 +57,15 @@ namespace lab07_collection
 
             Console.WriteLine($"Cards left:  {Deck.Count()}");
 
-            Console.WriteLine("      ");
+            
 
-            foreach (Card item in newarr)
+            foreach (Card item in newarray)
 
             {
 
                 if (item != null)
 
-                    Console.Write($"{item.CardNum} {item.suit} ");
+                    Console.Write($"{item.CardNum} {item.type} ");
 
             }
 
@@ -87,9 +79,9 @@ namespace lab07_collection
 
             string input = Console.ReadLine();
 
-            string input2 = input.ToLower();
+            string input1 = input.ToLower();
 
-            if (input2 == "y")
+            if (input1 == "y")
 
             {
 
@@ -113,15 +105,15 @@ namespace lab07_collection
 
             Deck<Card> dealerDeck = new Deck<Card>();
 
-            Card card1 = new Card("Ace", Card.Suits.Diamonds);
+            Card card1 = new Card("Ace", Card.Type.Diamonds);
 
-            Card card2 = new Card("J", Card.Suits.Hearts);
+            Card card2 = new Card("J", Card.Type .Hearts);
 
-            Card card3 = new Card("Q", Card.Suits.Clubs);
+            Card card3 = new Card("Q", Card.Type.Clubs);
 
-            Card card4 = new Card("10", Card.Suits.Spades);
+            Card card4 = new Card("10", Card.Type.Spades);
 
-            Card card5 = new Card("6", Card.Suits.Spades);
+            Card card5 = new Card("6", Card.Type .Spades);
 
             dealerDeck.Add(card1);
 
@@ -143,7 +135,7 @@ namespace lab07_collection
 
             {
 
-                Console.Write($"{item.CardNum} {item.suit} ");
+                Console.Write($"{item.CardNum} {item.type } ");
 
             }
 
@@ -182,7 +174,7 @@ namespace lab07_collection
 
             {
 
-                Console.Write($"{item.CardNum} {item.suit} ");
+                Console.Write($"{item.CardNum} {item.type } ");
 
             }
 
@@ -194,13 +186,13 @@ namespace lab07_collection
 
             {
 
-                Console.Write($"{item.CardNum} {item.suit} ");
+                Console.Write($"{item.CardNum} {item.type} ");
 
             }
 
             Console.WriteLine("          ");
 
-            Console.Write(" Dealer Deck: ");
+            Console.Write("Dealer Deck: ");
 
             foreach (Card item in dealerDeck)
 
@@ -208,11 +200,9 @@ namespace lab07_collection
 
                 if (item != null)
 
-                    Console.Write($"{item.CardNum} {item.suit} ");
+                    Console.Write($"{item.CardNum} {item.type} ");
 
             }
-
-            Console.WriteLine("          ");
 
             Console.WriteLine("          ");
         }

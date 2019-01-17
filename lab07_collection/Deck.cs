@@ -8,7 +8,10 @@ namespace lab07_collection
 {
     public class Deck<T>: IEnumerable<T> where T : Card
     {
-        T[] cards = new T[56];
+        /// <summary>
+    /// to see the number of card  in the game
+    /// </summary>
+        T[] cards = new T[54];
         int currentIndex = 0;
         int counter = 0;
 
@@ -29,7 +32,13 @@ namespace lab07_collection
             {
                 yield return cards[i];
             }
-        }
+         }
+        /// <summary>
+         /// process of removing card from the deck
+         /// </summary>
+         /// <param name="item"></param>
+         /// <returns></returns>
+         /// 
         public T[] Remove(T item)
         {
             for (int i = 0; i < cards.Length; i++)
