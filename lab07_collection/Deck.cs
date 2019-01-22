@@ -17,9 +17,9 @@ namespace lab07_collection
 
         public void Add(T item)
         {
-            if (currentIndex > cards.Length - 1)
+            if (currentIndex > cards.Length -1)
             {
-                Array.Resize(ref cards, cards.Length * 3);
+                Array.Resize(ref cards, cards.Length * 2);
             }
             cards[currentIndex] = item;
             currentIndex++;
