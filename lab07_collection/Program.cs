@@ -11,28 +11,18 @@ namespace lab07_collection
             Console.WriteLine("Time to play");
 
             Deck<Card> Deck = new Deck<Card>();
-            Card card1 = new Card("7", Card.Type.Diamonds);
-
-            Card card2 = new Card("2", Card.Type.Hearts);
-
-            Card card3 = new Card("10", Card.Type.Clubs);
-
-            Card card4 = new Card("2", Card.Type.Spades);
-
-            Card card5 = new Card("A", Card.Type.Spades);
-
+            Card card1 = new Card("4", Card.Type.Diamonds);
+            Card card2 = new Card("8", Card.Type.Hearts);
+            Card card3 = new Card("Q", Card.Type.Clubs);
+            Card card4 = new Card("A", Card.Type.Spades);
+            Card card5 = new Card("8", Card.Type.Spades);
             Card card6 = new Card("Ace", Card.Type.Diamonds);
 
             Deck.Add(card1);
-
             Deck.Add(card2);
-
             Deck.Add(card3);
-
             Deck.Add(card4);
-
             Deck.Add(card5);
-
             Deck.Add(card6);
 
             Console.WriteLine("your card is:");
@@ -46,18 +36,12 @@ namespace lab07_collection
             Console.WriteLine("      ");
 
             
-            /////////////////remove
-            Card[] newarray = Deck.Remove(card4);
+            /////////////////i am removing a card from the deck
+            Card[] newarray = Deck.Remove(card2);
 
-            Console.WriteLine($"Removing {card4.CardNum} {card4.type}");
-
-
-
+            Console.WriteLine($"Removing {card2.CardNum} {card2.type}");
             Console.WriteLine("      ");
-
-            Console.WriteLine($"Cards left:  {Deck.Count()}");
-
-            
+            Console.WriteLine($"Cards left:  {Deck.Count()}");   
 
             foreach (Card item in newarray)
 
@@ -70,18 +54,14 @@ namespace lab07_collection
             }
 
             Console.WriteLine("  ");
-
             Console.WriteLine("  ");
-
             Console.WriteLine("  ");
-
-            Console.WriteLine(" Would you like to start game?y/n ");
-
+            Console.WriteLine(" Would you like to start game?yes/no ");
             string input = Console.ReadLine();
 
             string input1 = input.ToLower();
 
-            if (input1 == "y")
+            if (input1 == "yes")
 
             {
 
@@ -107,22 +87,18 @@ namespace lab07_collection
 
             Card card1 = new Card("Ace", Card.Type.Diamonds);
 
-            Card card2 = new Card("J", Card.Type .Hearts);
+            Card card2 = new Card("k", Card.Type .Hearts);
 
-            Card card3 = new Card("Q", Card.Type.Clubs);
+            Card card3 = new Card("j", Card.Type.Clubs);
 
             Card card4 = new Card("10", Card.Type.Spades);
 
-            Card card5 = new Card("6", Card.Type .Spades);
+            Card card5 = new Card("2", Card.Type .Spades);
 
             dealerDeck.Add(card1);
-
             dealerDeck.Add(card2);
-
             dealerDeck.Add(card3);
-
             dealerDeck.Add(card4);
-
             dealerDeck.Add(card5);
 
             Console.WriteLine("Player 1  Deck:   Empty ");
@@ -134,64 +110,42 @@ namespace lab07_collection
             foreach (Card item in dealerDeck)
 
             {
-
                 Console.Write($"{item.CardNum} {item.type } ");
 
             }
 
             Console.WriteLine("          ");
-
             Console.WriteLine("          ");
-
             Console.WriteLine("(Distributing Deck)");
-
             Console.WriteLine("          ");
-
             Console.WriteLine("          ");
-
-
 
             player1.Add(card1);
-
             player1.Add(card2);
-
             player2.Add(card5);
-
             player2.Add(card4);
-
             dealerDeck.Remove(card1);
-
             dealerDeck.Remove(card2);
-
             dealerDeck.Remove(card5);
-
             dealerDeck.Remove(card4);
-
-
             Console.Write("Player 1 Deck: ");
 
             foreach (Card item in player1)
 
             {
-
                 Console.Write($"{item.CardNum} {item.type } ");
-
             }
 
             Console.WriteLine("          ");
-
             Console.Write("Player 2 Deck: ");
-
             foreach (Card item in player2)
 
             {
-
-                Console.Write($"{item.CardNum} {item.type} ");
+         Console.Write($"{item.CardNum} {item.type} ");
 
             }
 
             Console.WriteLine("          ");
-
             Console.Write("Dealer Deck: ");
 
             foreach (Card item in dealerDeck)
