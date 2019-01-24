@@ -5,4 +5,4 @@ The Enum hold diffrent type of cards like diamond,heart,etc...we have three meth
 Deck(generic) help us resize the array.
 This is the visual representation
 
-![](https://github.com/shalina2/Lab07-Collections/blob/Name-LAB07/Asset/collection%20game.png)
+![](https://github.com/shalina2/Lab07-Collections/blob/master/Asset/collection%20game.png)
